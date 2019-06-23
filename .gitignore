@@ -1,1 +1,3 @@
 .terraform/
+part-3/terraform.tfstate*
+tfplan

@@ -3,6 +3,10 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+terraform {
+  required_version = "0.11.14"
+}
+
 resource "aws_s3_bucket" "terraform_workshop" {
   bucket = "terraform-workshop-mikhailadvani"
 }
