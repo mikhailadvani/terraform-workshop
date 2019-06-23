@@ -9,7 +9,8 @@ terraform {
 }
 
 module "backend" {
-  source = "../../terraform-s3-backend"
+  # source = "../../terraform-s3-backend"
+  source = "git::https://github.com/mikhailadvani/terraform-s3-backend.git?ref=master"
   bucket_name = "terraform-workshop-mikhailadvani-backend-bucket"
   dynamodb_table_name = "terraform-workshop-mikhailadvani-locking-table"
 }
