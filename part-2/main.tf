@@ -1,6 +1,6 @@
 provider "aws" {
   version = "2.16.0"
-  region = "eu-west-1"
+  region  = "eu-west-1"
 }
 
 terraform {
@@ -12,11 +12,12 @@ resource "aws_s3_bucket" "terraform_workshop" {
 }
 
 resource "local_file" "user" {
-    content = <<EOF
+  content = <<EOF
 Name: "abc"
 Email: "abc@email.com"
 EOF
-    filename = "${path.module}/user.txt"
+
+  filename = "${path.module}/user.txt"
 }
 
 resource "aws_s3_bucket_object" "object" {
